@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dropwown</title>
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Bootstrap-theme css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body>
+	<!-- .container -->
+	<div class="container">
+		<!-- .row -->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Hello</h3>
+				<button id="pop" type="button" class="btn btn-default mybut">
+					button
+				</button>
+				<div class="col-md-3">
+					<button id="trigger" type="button" class="btn btn-default">button</button>
+				</div>
+				<div class="col-md-offset-2 col-md-3">
+					<pre class="collapse">sadasdadadasadasdadadadsdasdadadsddddddddddddddasdsadssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+					<button id="close" type="button" class="btn btn-default">close</button>
+					</pre>
+				</div>
+			</div><!-- /.col-md-12 -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+
+
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$("#pop").popover({
+			title: "Title",
+			content: "Content",
+			trigger: "hover"
+		});
+
+		$("#trigger").click(function(){
+			$(".collapse").collapse("toggle");
+		});
+
+		$("#close").click(function(){
+			$(".collapse").collapse("hide");
+		});
+	</script>
+</body>
+</html>
